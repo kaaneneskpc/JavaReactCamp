@@ -9,4 +9,10 @@ This project's code sources here : <a href="https://github.com/kaaneneskpc/JavaR
 This day learnt java basics.(Loops,If-Else Conditions,Arrays)
 </p>
 
+<h3>Week 2</h3>
+<p align="left">
+This project's code sources here : <a href="https://github.com/kaaneneskpc/JavaReactCamp/tree/main/Java/OOP">OOP</a>.</br>
+This day learnt java oop programming basics
+</p>
+
 
