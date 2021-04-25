@@ -8,6 +8,7 @@ public class ProductManager {
         System.out.println(product.name+" "+"Added to Cart");
     }
     public void deleteToCart(Product product){
+
         System.out.println(product.name+" "+"Deleted to Cart");
     }
 }
