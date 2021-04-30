@@ -1,17 +1,11 @@
-package com.company.oopProject.models;
+package com.company.oopProject.Homework.model;
 
-public class Category {
+public class User {
 
-    private int id;
-    private String name;
+    public int id;
+    public String name;
 
-
-
-    public Category() {
-    }
-
-    public Category(int id, String name) {
-        super();
+    public User() {
         this.id = id;
         this.name = name;
     }
@@ -31,6 +25,4 @@ public class Category {
     public void setName(String name) {
         this.name = name;
     }
-
-
 }
