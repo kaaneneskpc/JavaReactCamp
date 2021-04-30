@@ -15,4 +15,10 @@ This project's code sources here : <a href="https://github.com/kaaneneskpc/JavaR
 This day learnt java oop programming basics
 </p>
 
+<h3>Week 3</h3>
+<p align="left">
+This project's code sources here : <a href="https://github.com/kaaneneskpc/JavaReactCamp/tree/main/Java/OOP/src/com/company/oopProject/Homework">OOP-Advanced</a>.</br>
+This day learnt advanced java oop programming 
+</p>
+
 
