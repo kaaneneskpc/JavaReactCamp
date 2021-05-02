@@ -21,4 +21,10 @@ This project's code sources here : <a href="https://github.com/kaaneneskpc/JavaR
 This day learnt advanced java oop programming 
 </p>
 
+<h3>Week 4</h3>
+<p align="left">
+This project's code sources here : <a href="https://github.com/kaaneneskpc/JavaReactCamp/tree/main/Java/OOP/src/com/company/oopProject/Simulation">Game Sales Simulation</a>.</br>
+This day implemented how i learn for 4 weeks to game sales simulation.
+</p>
+
 
