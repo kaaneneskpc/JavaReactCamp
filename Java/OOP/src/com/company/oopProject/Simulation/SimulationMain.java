@@ -26,11 +26,22 @@ public class SimulationMain {
         user2.setIdentityNumber("21111111111");
         user2.setBirthDate("14.11.1998");
 
+        Campaign campaign1=new Campaign();
+        campaign1.setCampaignId(1);
+        campaign1.setCampaignDetail("Winter Season Campaign");
+        campaign1.setDiscountAmount(30.0);
+
+        Campaign campaign2=new Campaign();
+        campaign2.setCampaignId(2);
+        campaign2.setCampaignDetail("Summer Season Campaign");
+        campaign2.setDiscountAmount(45.0);
+
         Game game1 = new Game();
         game1.setGameId(1);
         game1.setGameName("F1 2020");
         game1.setGameType("Simulation");
         game1.setUnitPrice(99.90);
+        game1.setCampaign(campaign1);
 
 
         Game game2 = new Game();
@@ -38,13 +49,7 @@ public class SimulationMain {
         game2.setGameName("F1 2021");
         game2.setGameType("Simulation");
         game2.setUnitPrice(499.90);
-
-        Campaign campaign1=new Campaign();
-        campaign1.setCampaignId(1);
-        campaign1.setCampaignDetail("Winter Season Campaign");
-        campaign1.setDiscountAmount(30.0);
-
-        game1.setCampaign(campaign1);
+        game2.setCampaign(campaign2);
 
 
 
@@ -73,12 +78,15 @@ public class SimulationMain {
                     );
         }
 
-        CampaignManager campaignManager = new CampaignManager();
+        System.out.println("------------------MANAGERS--------------------------");
+
+
         SaleManager saleManager = new SaleManager();
-
         saleManager.buy(campaign1,game1,user1);
+        saleManager.buy(campaign2,game2,user2);
 
-        System.out.println(game1.getUnitPriceAfterDiscount());
+
+
 
 
 

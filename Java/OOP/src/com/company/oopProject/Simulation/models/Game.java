@@ -11,17 +11,16 @@ public class Game{
     private double unitPriceAfterDiscount;
     Campaign campaign;
 
-
     public Game() {
     }
 
-    public Game(int gameId, String gameName, String gameType,double unitPrice,double unitPriceAfterDiscount,Campaign campaign) {
+    public Game(int gameId, String gameName, String gameType, double unitPrice, double unitPriceAfterDiscount, Campaign campaign) {
         this.gameId = gameId;
         this.gameName = gameName;
         this.gameType = gameType;
         this.unitPrice = unitPrice;
-        this.unitPriceAfterDiscount=unitPriceAfterDiscount;
-        this.campaign=campaign;
+        this.unitPriceAfterDiscount = unitPriceAfterDiscount;
+        this.campaign = campaign;
     }
 
     public int getGameId() {
@@ -56,7 +55,11 @@ public class Game{
         this.unitPrice = unitPrice;
     }
 
-    public Campaign getCampaign() {
+    public double getUnitPriceAfterDiscount() {
+        return this.unitPrice- ((this.unitPrice / 100) *  this.campaign.getDiscountAmount()) ;
+    }
+
+     public Campaign getCampaign() {
         return campaign;
     }
 
@@ -64,9 +67,7 @@ public class Game{
         this.campaign = campaign;
     }
 
-    public double getUnitPriceAfterDiscount() {
-        return this.unitPrice- (this.unitPrice / 100 *  this.campaign.getDiscountAmount()) ;
-    }
+
 
 
 }
