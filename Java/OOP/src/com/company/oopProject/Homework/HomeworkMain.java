@@ -60,10 +60,10 @@ public class HomeworkMain {
         courseManager.isCompleted(course1);
         courseManager.addMultiple(courses);
         System.out.println(split_line);
-        instructorManager.addInstructor(instructor1);
+        instructorManager.addInstructor(instructor1,new EmailLogger());
         System.out.println(split_line);
         courseManager.logSystem(new DatabaseLogger());
-        instructorManager.logSystem(new EmailLogger());
+
     }
 
 }

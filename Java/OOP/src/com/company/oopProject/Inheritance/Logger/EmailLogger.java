@@ -1,4 +1,4 @@
-package com.company.oopProject.Inheritance;
+package com.company.oopProject.Inheritance.Logger;
 
 public class EmailLogger extends Logger{
     @Override

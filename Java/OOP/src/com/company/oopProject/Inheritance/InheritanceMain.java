@@ -1,5 +1,7 @@
 package com.company.oopProject.Inheritance;
 
+import com.company.oopProject.Inheritance.Logger.DatabaseLogger;
+
 public class InheritanceMain {
 
     public static void main(String[] args) {

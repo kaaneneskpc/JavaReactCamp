@@ -1,6 +1,7 @@
 package com.company.oopProject.Inheritance;
 
 
+import com.company.oopProject.Inheritance.Logger.Logger;
 
 public class CustomerManager {
 
@@ -10,6 +11,7 @@ public class CustomerManager {
      }
 
      public  void logSystem(Logger logger){
+
         logger.log();
      }
 
