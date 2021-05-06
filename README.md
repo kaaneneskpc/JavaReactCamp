@@ -24,7 +24,12 @@ This day learnt advanced java oop programming
 <h3>Week 4</h3>
 <p align="left">
 This project's code sources here : <a href="https://github.com/kaaneneskpc/JavaReactCamp/tree/main/Java/OOP/src/com/company/oopProject/Simulation">Game Sales Simulation</a>.</br>
-This day implemented how i learn for 4 weeks to game sales simulation.
+I applied what I learned for 5 weeks with game sales simulation.
 </p>
 
+<h3>Week 5</h3>
+<p align="left">
+This project's code sources here : <a href="https://github.com/kaaneneskpc/JavaReactCamp/tree/main/Java/Architecture/src/com/company/architecture/HOMEWORK">Auth Service Management</a>.</br>
+I applied what I learned for 5 weeks with auth service management.
+</p>
 
