@@ -22,6 +22,7 @@ public class AuthManager implements AuthService {
      if((user.getEmail() != null && !user.getEmail().isEmpty()) &&(user.getPassword()!=null && !user.getPassword().isEmpty())){
          if(userService.equalEmail(user.getEmail()) && userService.equalPassword(user.getPassword())){
              System.out.println("Logined"+" "+user.getName());
+             return;
          }
          System.out.println("Failed");
 
@@ -32,7 +33,7 @@ public class AuthManager implements AuthService {
     public String signUp(User user) {
 
        userService.addUser(user);
-        System.out.println("Success"+" "+user.getName());
+        System.out.println("Successly signed up : "+" "+user.getName());
         return "ABXCFT54";
 
     }

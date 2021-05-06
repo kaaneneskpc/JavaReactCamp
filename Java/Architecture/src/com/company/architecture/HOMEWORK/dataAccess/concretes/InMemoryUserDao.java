@@ -14,14 +14,15 @@ public class InMemoryUserDao implements UserDao {
 
     @Override
     public void addUser(User user) {
-
         System.out.println("User added successfully");
-    }
+        users.add(user);
+}
 
     @Override
     public void deleteUser(User user) {
 
         System.out.println("User deleted successfully");
+
     }
 
     @Override
@@ -32,6 +33,7 @@ public class InMemoryUserDao implements UserDao {
 
     @Override
     public boolean equalEmail(String email) {
+
         for(User user : users){
             if(user.getEmail()==email){
                 return true;

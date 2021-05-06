@@ -23,8 +23,12 @@ public class HomeworkMain {
 
       UserManager userManager = new UserManager(new InMemoryUserDao());
       AuthService authService = new AuthManager(userManager);
+
+
+
       authService.signUp(user1);
       authService.signIn(user1);
+      userManager.getAll();
 
 
 

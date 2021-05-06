@@ -27,20 +27,18 @@ public class UserManager implements UserService {
         Matcher matcher = pattern.matcher(user.getEmail());
 
         if(user.getName().length()>=2 && user.getSurname().length()>=2){
+
             if(matcher.matches()){
                 if(user.getPassword().length()>=6){
                     for(User userList : userDao.getAll()){
+
                         if(userList.getEmail()==user.getEmail()){
                             System.out.println("Email has already created");
-
-                         }
-                        else{
-                            userDao.addUser(user);
-                            System.out.println(user.getName()+""+"added");
-
-                        }
-
-                    }
+                            return;
+  }
+                     }
+                    userDao.addUser(user);
+                    System.out.println(user.getName()+""+"added");
                 }
             }
         }
@@ -56,6 +54,7 @@ public class UserManager implements UserService {
     public List<User> getAll() {
 
         return userDao.getAll();
+
     }
 
     @Override
