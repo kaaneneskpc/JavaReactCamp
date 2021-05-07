@@ -1,7 +1,6 @@
 package com.company.architecture.HOMEWORK.business.concretes;
 
 import com.company.architecture.HOMEWORK.business.abstracts.UserService;
-import com.company.architecture.HOMEWORK.core.abstracts.GoogleAuthService;
 import com.company.architecture.HOMEWORK.dataAccess.abstracts.UserDao;
 import com.company.architecture.HOMEWORK.entities.concretes.User;
 
@@ -38,7 +37,7 @@ public class UserManager implements UserService {
   }
                      }
                     userDao.addUser(user);
-                    System.out.println(user.getName()+""+"added");
+
                 }
             }
         }
@@ -47,14 +46,26 @@ public class UserManager implements UserService {
 
     @Override
     public void deleteUser(User user) {
+      userDao.deleteUser(user);
+        System.out.println("User deleted"+" "+user.getName());
+    }
 
+    @Override
+    public void updateUser(User user) {
+        userDao.updateUser(user);
+        System.out.println("User updated"+" "+user.getName());
     }
 
     @Override
     public List<User> getAll() {
 
-        return userDao.getAll();
+       return userDao.getAll();
 
+    }
+
+    @Override
+    public User get(int id) {
+        return userDao.getbyId(id);
     }
 
     @Override

@@ -9,5 +9,6 @@ public interface AuthService {
     void signIn(User user);
     String  signUp(User user);
     boolean verification(User user,String code);
+    void signInWithGoogle(User user);
 }
 

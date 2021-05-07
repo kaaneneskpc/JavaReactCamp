@@ -9,26 +9,60 @@ import java.util.List;
 
 public class InMemoryUserDao implements UserDao {
 
-    ArrayList<User> users = new ArrayList<>();
+    private List<User> users;
+
+
+    public InMemoryUserDao() {
+        super();
+        this.users = new ArrayList<User>();
+    }
 
 
     @Override
     public void addUser(User user) {
-        System.out.println("User added successfully");
+
         users.add(user);
+        System.out.println(user.getEmail() + "Signed Up");
 }
 
     @Override
     public void deleteUser(User user) {
 
-        System.out.println("User deleted successfully");
+        User deletedUser = users.stream().filter(d->d.getId()== user.getId()).findFirst().get();
+        users.remove(deletedUser);
 
+
+    }
+
+    @Override
+    public void updateUser(User user) {
+        User updatedUser = users.stream().filter(u -> u.getId()== user.getId()).findFirst().get();
+        updatedUser.setEmail(user.getEmail());
+        updatedUser.setPassword(user.getPassword());
+        updatedUser.setName(user.getName());
+        updatedUser.setSurname(user.getSurname());
+        System.out.println( updatedUser.getName()+ "Updated");
+    }
+
+    @Override
+    public List<String> getEmails() {
+        List<String> emails = new ArrayList<String>();
+        for(User user:users){
+            emails.add(user.getEmail());
+        }
+        return emails;
     }
 
     @Override
     public List<User> getAll() {
 
         return users;
+
+     }
+
+    @Override
+    public User getbyId(int id) {
+        return users.stream().filter(u -> u.getId() == id).findFirst().get();
     }
 
     @Override
@@ -40,6 +74,7 @@ public class InMemoryUserDao implements UserDao {
             }
         }
         return false;
+
     }
 
     @Override
@@ -50,5 +85,6 @@ public class InMemoryUserDao implements UserDao {
             }
         }
         return false;
+
     }
 }
